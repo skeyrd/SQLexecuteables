@@ -2,7 +2,7 @@ set nocount on;
 --- ^Gets rid of messages in output
 
 --- Declare our variables based on input from sqlcmd -v 
-DECLARE @SiteID NVARCHAR(1000) = 'aces.dbo.aces_bpi_csp'
+DECLARE @SiteID NVARCHAR(1000) = 'aces.dbo.aces_$(myName)'
 DECLARE @loadRevisionTable NVARCHAR(1000) = CONCAT(@SiteID, '_load_fcst_r')
 DECLARE @loadFcstTable NVARCHAR(1000) = CONCAT(@SiteID, '_load_fcst')
 DECLARE @myDate NVARCHAR(30) = CONVERT(varchar(8), GETDATE(), 112) 
